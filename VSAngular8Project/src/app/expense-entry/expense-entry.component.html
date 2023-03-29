@@ -1,0 +1,46 @@
+<p>expense-entry works!</p>
+<input type="text" [(ngModel)]="userName" />
+<p>Two way binding! Hello {{ userName }}!</p>
+<p [style.color]="myColor">Text color is styled using style binding</p>
+
+<div *ngFor="let emp of employees">
+    <span>{{emp.getName()}} -   <span>{{emp.getYearlySalary()}}
+        </span>
+    </span>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th attr.colspan="ColumnSpan">
+                {{pageHeader}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>First Name</td>
+            <td>{{FirstName}}</td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td>{{LastName}}</td>
+        </tr>
+        <tr>
+            <td>Branch</td>
+            <td>{{Branch}}</td>
+        </tr>
+        <tr>
+            <td>Mobile</td>
+            <td>{{Mobile}}</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>{{Gender}}</td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td>{{Age}}</td>
+        </tr>
+    </tbody>
+  </table>
