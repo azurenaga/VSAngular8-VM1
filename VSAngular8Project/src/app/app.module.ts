@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ExpenseEntryComponent } from './expense-entry/expense-entry.component';
 import { FormsModule } from '@angular/forms';
+import { TestDirectiveComponent } from './test-directive/test-directive.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ExpenseEntryComponent
+    ExpenseEntryComponent,
+    TestDirectiveComponent
   ],
   imports: [
     BrowserModule,
