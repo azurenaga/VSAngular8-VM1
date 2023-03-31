@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { ExpenseEntryComponent } from './expense-entry/expense-entry.component';
 import { FormsModule } from '@angular/forms';
 import { TestDirectiveComponent } from './test-directive/test-directive.component';
+import { CustomstyleDirective } from './customstyle.directive';
+import { ClscompComponent } from './clscomp/clscomp.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExpenseEntryComponent,
-    TestDirectiveComponent
+    TestDirectiveComponent,
+    CustomstyleDirective,
+    ClscompComponent
   ],
   imports: [
     BrowserModule,

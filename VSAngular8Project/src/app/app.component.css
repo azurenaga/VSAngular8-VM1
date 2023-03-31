@@ -1,0 +1,21 @@
+#table {
+    display: table;
+    width: 100%;
+}
+
+#header {
+    display: table-header-group;
+}
+
+.headerCell {
+    display: table-cell;
+    font-weight: bold;
+}
+
+.row {
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+}
