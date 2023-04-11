@@ -8,6 +8,13 @@ import { FormsModule } from '@angular/forms';
 import { TestDirectiveComponent } from './test-directive/test-directive.component';
 import { CustomstyleDirective } from './customstyle.directive';
 import { ClscompComponent } from './clscomp/clscomp.component';
+import { ReactiveProgramComponent } from './reactive-program/reactive-program.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { AngMaterialComponent } from './ang-material/ang-material.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,12 +22,19 @@ import { ClscompComponent } from './clscomp/clscomp.component';
     ExpenseEntryComponent,
     TestDirectiveComponent,
     CustomstyleDirective,
-    ClscompComponent
+    ClscompComponent,
+    ReactiveProgramComponent,
+    AngMaterialComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NoopAnimationsModule,
+    MatTableModule,
+    MatButtonModule,
+    MatIconModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

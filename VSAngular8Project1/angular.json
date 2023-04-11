@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "VSAngular8Project": {
+    "VSAngular8Project1": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/vsangular8-project",
+            "outputPath": "dist/vsangular8-project1",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -25,12 +25,29 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css"
             ],
             "scripts": []
           },
           "configurations": {
+            "hi": {
+              "aot": true,
+              "outputPath": "dist/hi/",
+              "i18nFile": "src/locale/messages.hi.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "hi",
+              "i18nMissingTranslation": "error",
+              "baseHref": "/hi/"
+            },
+            "en": {
+              "aot": true,
+              "outputPath": "dist/en/",
+              "i18nFile": "src/locale/messages.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en",
+              "i18nMissingTranslation": "error",
+              "baseHref": "/en/"
+            },
             "production": {
               "budgets": [
                 {
@@ -61,18 +78,24 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "VSAngular8Project:build:production"
+              "browserTarget": "VSAngular8Project1:build:production"
             },
             "development": {
-              "browserTarget": "VSAngular8Project:build:development"
-            }
+              "browserTarget": "VSAngular8Project1:build:development"
+            },
+            "hi": {
+              "browserTarget": "i18n-sample:build:hi"
+           },
+           "en": {
+              "browserTarget": "i18n-sample:build:en"
+           }           
           },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "VSAngular8Project:build"
+            "browserTarget": "VSAngular8Project1:build"
           }
         },
         "test": {
@@ -88,7 +111,6 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css"
             ],
             "scripts": []
